@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Homari - HomeScreen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .homari {
+      width: 78.92px;
+    }
+
+    .location2 {
+      height: 25px;
+      width: 25px;
+    }
+
+    #search {
+      outline: none;
+      border: none;
+      height: 50px;
+      width: 330px;
+      padding: 5px;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+
+    .search-container {
+      background-color: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 320px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    .filter {
+      height: 50px;
+      width: 60px;
+      border-radius: 10px;
+      background-color: #e30613;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    .filter span {
+      font-size: 18px;
+    }
+
+    .txt1 {
+      font-size: 15px;
+    }
+
+    .txt2 {
+      font-size: 11px;
+    }
+
+    .txt3 {
+      font-size: 10px;
+    }
+
+    .filter1 {
+      height: 50px;
+      width: 127px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    /* slider start css  */
+
+    @keyframes fade {
+      from {
+        opacity: 0.4;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    #sliderr {
+      margin: 0 auto;
+      width: 80%;
+      overflow: hidden;
+    }
+
+    .slidess {
+      overflow: hidden;
+      animation-name: fade;
+      animation-duration: 1s;
+      display: none;
+    }
+
+    .caro-slide {
+      width: 100%;
+    }
+
+    #dot {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .dott {
+      display: inline-block;
+      border-radius: 50%;
+      background: #d3d3d3;
+      height: 8px;
+      width: 8px;
+      margin: 0px 4px;
+    }
+
+    .active {
+      background: black;
+    }
+
+    @media (max-width: 567px) {
+      #sliderr {
+        width: 100%;
+      }
+    }
+
+    /* slider end css  */
+
+    .fw-medium {
+      font-size: 13px;
+    }
+
+    .offer-section {
+      height: 80px;
+      width: 193px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    .title {
+      padding-left: 15px;
+      font-size: 13px;
+    }
+
+    .btm-nav {
+      height: 60px;
+    }
+
+    .txt4 {
+      font-size: 17px;
+    }
+
+    .btm-tab1 {
+      border-right: 1px solid black;
+      padding-right: 50px;
+    }
+
+    .txt5 {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .txt6 {
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+  <!-- Header Section Start -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md d-flex align-items-center justify-content-between">
+        <img class="img-fluid homari mt-3" src="images/homarilogo.png" alt="" />
+        <p style="font-size: 13px" class="mt-4">Order your favourite food!</p>
+      </div>
+      <div class="d-flex align-items-center justify-content-between">
+        <div>
+          <div class="col-md d-flex w-100">
+            <div class="d-flex w-100">
+              <img class="img-fluid location2" src="icon/location.png" alt="" />
+              <p class="" style="font-weight: bolder">Sambhaji Colony</p>
+              <!-- <img
+                  class="img-fluid"
+                  style="width: 28px; height: 28px"
+                  src="icon/arrowicon.png"
+                  alt=""
+                /> -->
+            </div>
+          </div>
+          <p class="mb-0" style="font-size: 13px; margin-top: -10px">
+            Mathura Nagar, N-6, Cidco, Aurangabad
+          </p>
+        </div>
+        <div>
+          <a href="Profile.html">
+            <i class="fa-solid fa-circle-user" style="font-size: 2rem; color: #e30613"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Section End -->
+
+  <!-- Slider Section Start -->
+
+  <div class="container">
+    <div class="row" style="background-color: #ffffff">
+      <div class="col-md">
+
+        <!-- SearchBar Input Start -->
+
+        <div class="d-flex align-items-center justify-content-between searching mt-3">
+          <div class="search-container">
+            <img src="icon/Search_icon.png" class="img-fluid mx-3" />
+            <input type="search" placeholder="Search" id="search" />
+          </div>
+          <div class="filter d-flex align-items-center justify-content-center">
+            <a href="Filter.html">
+              <img src="icon/filter.png" class="img-fluid" />
+            </a>
+          </div>
+        </div>
+
+        <!-- SearchBar Input End -->
+
+        <!-- Slider Button Start -->
+
+        <div class="d-flex align-items-center justify-content-between slider">
+          <div class="filter d-flex align-items-center justify-content-center mt-4">
+            <span class="text-white" style="font-size: 18px">All</span>
+          </div>
+          <div class="filter filter1 d-flex align-items-center justify-content-center mt-4 bg-white mx-1">
+            <span class="text-black txt1">Non-veg</span>
+          </div>
+          <div class="filter filter1 d-flex align-items-center justify-content-center mt-4 bg-white mx-1">
+            <span class="text-black txt1">Pure-veg</span>
+          </div>
+          <div class="filter filter1 d-flex align-items-center justify-content-center mt-4 bg-white mx-1">
+            <span class="text-black txt1">Combos</span>
+          </div>
+        </div>
+
+        <!-- Slider Button End -->
+
+      </div>
+      <div class="col-md">
+
+        <!-- Carosuel Start -->
+
+        <div id="sliderr" class="mt-4">
+          <div class="slidess">
+            <img src="images/bannerslide.png" class="img-fluid caro-slide" width="100%" />
+          </div>
+          <div class="slidess">
+            <img src="images/bannerslide1.png" class="img-fluid caro-slide" width="100%" />
+          </div>
+          <div class="slidess">
+            <img src="images/bannerslide2.png" class="img-fluid caro-slide" width="100%" />
+          </div>
+          <div class="slidess">
+            <img src="images/bannerslide3.png" class="img-fluid caro-slide" width="100%" />
+          </div>
+          <div class="slidess">
+            <img src="images/bannerslide1.png" class="img-fluid caro-slide" width="100%" />
+          </div>
+          <div id="dot">
+            <span class="dott"></span><span class="dott"></span><span class="dott"></span><span
+              class="dott"></span><span class="dott"></span>
+          </div>
+        </div>
+
+        <!-- Carosuel End -->
+
+        <p class="text-center mt-2 txt2">Are you hungry</p>
+
+        <!-- Offer Section Start -->
+
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <div class="d-flex align-items-center justify-content-between offer-section p-4">
+            <div class="offf">
+              <span class="fw-medium">Top Offer</span>
+              <span class="txt3">Flat discount</span>
+            </div>
+            <img src="images/offer.png" class="img-fluid" />
+          </div>
+          <div class="d-flex align-items-center justify-content-between offer-section p-4">
+            <div class="offf">
+              <span class="fw-medium">Top Offer</span>
+              <span class="txt3">Flat discount</span>
+            </div>
+            <img src="images/offer.png" class="img-fluid" />
+          </div>
+        </div>
+
+        <!-- Offer Section End -->
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Slider Section End -->
+
+  <!-- Food Section Start -->
+
+  <div class="container">
+    <div class="row" style="overflow-y: scroll; height: 225px">
+      <!-- Section 1 -->
+      <div class="col-md d-flex align-items-center justify-content-between mt-4">
+        <div>
+          <a href="FoodSearch.html" style="text-decoration: none">
+            <img src="images/food1.png" class="img-fluid" /><br />
+            <span class="title text-dark">Biriyani</span>
+          </a>
+        </div>
+        <div>
+          <a href="FoodSearch.html" style="text-decoration: none">
+            <img src="images/food2.png" class="img-fluid" /><br />
+            <span class="title text-dark">Idlivada</span>
+          </a>
+        </div>
+        <div>
+          <a href="FoodSearch.html" style="text-decoration: none">
+            <img src="images/food3.png" class="img-fluid" /><br />
+            <span class="title text-dark">Momos</span>
+          </a>
+        </div>
+        <div>
+          <a href="FoodSearch.html" style="text-decoration: none">
+            <img src="images/food4.png" class="img-fluid" /><br />
+            <span class="title text-dark">Noodles</span>
+          </a>
+        </div>
+      </div>
+      <!-- Section 2 -->
+      <div class="col-md d-flex align-items-center justify-content-between mt-4">
+        <div>
+          <a href="FoodSearch.html" style="text-decoration: none">
+            <img src="images/food7.png" class="img-fluid" /><br />
+            <span class="title text-dark">Pea nuts</span>
+          </a>
+        </div>
+        <div>
+          <a href="FoodSearch.html" style="text-decoration: none">
+            <img src="images/food5.png" class="img-fluid" /><br />
+            <span class="title text-dark">Dosa</span>
+          </a>
+        </div>
+        <div>
+          <a href="FoodSearch.html" style="text-decoration: none">
+            <img src="images/food6.png" class="img-fluid" /><br />
+            <span class="title text-dark">Manch</span>
+          </a>
+        </div>
+        <div>
+          <a href="FoodSearch.html" style="text-decoration: none">
+            <img src="images/food8.png" class="img-fluid" /><br />
+            <span class="title text-dark">Chespiza</span>
+          </a>
+        </div>
+      </div>
+      <!-- Section 3 -->
+      <div class="col-md d-flex align-items-center justify-content-between mt-4">
+        <div>
+          <a href="FoodSearch.html" style="text-decoration: none">
+            <img src="images/food1.png" class="img-fluid" /><br />
+            <span class="title text-dark">Biriyani</span>
+          </a>
+        </div>
+        <div>
+          <a href="FoodSearch.html" style="text-decoration: none">
+            <img src="images/food2.png" class="img-fluid" /><br />
+            <span class="title text-dark">Idlivada</span>
+          </a>
+        </div>
+        <div>
+          <a href="FoodSearch.html" style="text-decoration: none">
+            <img src="images/food3.png" class="img-fluid" /><br />
+            <span class="title text-dark">Momos</span>
+          </a>
+        </div>
+        <div>
+          <a href="FoodSearch.html" style="text-decoration: none">
+            <img src="images/food4.png" class="img-fluid" /><br />
+            <span class="title text-dark">Noodles</span>
+          </a>
+        </div>
+      </div>
+      <!-- Section 4 -->
+      <div class="col-md d-flex align-items-center justify-content-between mt-4">
+        <div>
+          <a href="FoodSearch.html" style="text-decoration: none">
+            <img src="images/food7.png" class="img-fluid" /><br />
+            <span class="title text-dark">Pea nuts</span>
+          </a>
+        </div>
+        <div>
+          <a href="FoodSearch.html" style="text-decoration: none">
+            <img src="images/food5.png" class="img-fluid" /><br />
+            <span class="title text-dark">Dosa</span>
+          </a>
+        </div>
+        <div>
+          <a href="FoodSearch.html" style="text-decoration: none">
+            <img src="images/food6.png" class="img-fluid" /><br />
+            <span class="title text-dark">Manch</span>
+          </a>
+        </div>
+        <div>
+          <a href="FoodSearch.html" style="text-decoration: none">
+            <img src="images/food8.png" class="img-fluid" /><br />
+            <span class="title text-dark">Chespiza</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Food Section End -->
+
+  <!-- Cards Section Start -->
+
+  <div class="container">
+    <div class="row">
+      <p class="text-center my-3">Best Chef</p>
+      <div class="col-md">
+        <!-- Section 1 -->
+        <div class="card mb-3" style="width: 100%; border-radius: 15px">
+          <a href="FoodSearch.html">
+            <img src="images/aloodosa.png" class="card-img-top" />
+          </a>
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <p class="card-text mb-0 txt5">Aloo Masala Dosa</p>
+                <p class="txt6 mb-0">Veg • ₹ 350</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-center">
+                <button type="button" class="btn btn-success px-2 pt-0 pb-1" style="font-size: 13px">
+                  4.5 <i class="fa-solid fa-star" style="font-size: 11px"></i>
+                </button>
+              </div>
+            </div>
+            <hr class="mb-2 mt-3" />
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <img src="icon/discount.png" />
+                <span class="txt6">50% OFF up to ₹100</span>
+              </div>
+              <div>
+                <span class="txt6"><i class="fa-regular fa-clock"></i> 8.4 min - 3.5km</span>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Section 2 -->
+        <div class="card mb-3" style="width: 100%; border-radius: 15px">
+          <img src="images/chef1.png" class="card-img-top" />
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <p class="card-text mb-0 txt5">Babita Chef</p>
+                <p class="txt6 mb-0">Veg • ₹ 250</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-center">
+                <button type="button" class="btn btn-success px-2 pt-0 pb-1" style="font-size: 13px">
+                  4.1 <i class="fa-solid fa-star" style="font-size: 11px"></i>
+                </button>
+              </div>
+            </div>
+            <hr class="mb-2 mt-2" />
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <img src="icon/discount.png" />
+                <span class="txt6">50% OFF up to ₹100</span>
+              </div>
+              <div>
+                <span class="txt6"><i class="fa-regular fa-clock"></i> 5.4 min - 2.5km</span>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Section 3 -->
+        <div class="card mb-3" style="width: 100%; border-radius: 15px">
+          <img src="images/chef1.png" class="card-img-top" />
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <p class="card-text mb-0 txt5">Babita Chef</p>
+                <p class="txt6 mb-0">Veg • ₹ 250</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-center">
+                <button type="button" class="btn btn-success px-2 pt-0 pb-1" style="font-size: 13px">
+                  4.1 <i class="fa-solid fa-star" style="font-size: 11px"></i>
+                </button>
+              </div>
+            </div>
+            <hr class="mb-2 mt-2" />
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <img src="icon/discount.png" />
+                <span class="txt6">50% OFF up to ₹100</span>
+              </div>
+              <div>
+                <span class="txt6"><i class="fa-regular fa-clock"></i> 5.4 min - 2.5km</span>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Section 4 -->
+        <div class="card mb-3" style="width: 100%; border-radius: 15px">
+          <img src="images/chef1.png" class="card-img-top" />
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <p class="card-text mb-0 txt5">Babita Chef</p>
+                <p class="txt6 mb-0">Veg • ₹ 250</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-center">
+                <button type="button" class="btn btn-success px-2 pt-0 pb-1" style="font-size: 13px">
+                  4.1 <i class="fa-solid fa-star" style="font-size: 11px"></i>
+                </button>
+              </div>
+            </div>
+            <hr class="mb-2 mt-2" />
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <img src="icon/discount.png" />
+                <span class="txt6">50% OFF up to ₹100</span>
+              </div>
+              <div>
+                <span class="txt6"><i class="fa-regular fa-clock"></i> 5.4 min - 2.5km</span>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Section 5 -->
+        <div class="card mb-3" style="width: 100%; border-radius: 15px">
+          <img src="images/chef1.png" class="card-img-top" />
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <p class="card-text mb-0 txt5">Babita Chef</p>
+                <p class="txt6 mb-0">Veg • ₹ 250</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-center">
+                <button type="button" class="btn btn-success px-2 pt-0 pb-1" style="font-size: 13px">
+                  4.1 <i class="fa-solid fa-star" style="font-size: 11px"></i>
+                </button>
+              </div>
+            </div>
+            <hr class="mb-2 mt-2" />
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <img src="icon/discount.png" />
+                <span class="txt6">50% OFF up to ₹100</span>
+              </div>
+              <div>
+                <span class="txt6"><i class="fa-regular fa-clock"></i> 5.4 min - 2.5km</span>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards Section End -->
+
+  <!-- Bottom Start Navigation -->
+
+  <div class="container mt-2 position-sticky bottom-0 bg-white" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px">
+    <div class="row d-flex align-items-center justify-content-between btm-shadow">
+      <div class="col-md d-flex align-items-center justify-content-around btm-nav">
+        <div class="d-flex align-items-center justify-content-center btm-tab1">
+          <img src="icon/order.png" />
+          <span class="txt4 px-2">Order now</span>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+          <a href="Location.html" style="text-decoration: none"
+            class="d-flex align-items-center justify-content-center">
+            <img src="icon/thali.png" />
+            <span class="txt4 px-2 text-black">Add in Thali</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom End Navigation -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

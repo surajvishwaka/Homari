@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Homari - Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #exampleModalToggleLabel {
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+  <!-- Profile Section Start -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md d-flex">
+        <div class="mx-2 mt-3">
+          <a href="Home.html">
+            <img src="icon/right.png" class="img-fluid" />
+          </a>
+        </div>
+        <div class="mx-2 mt-3" style="width: 77%; text-align: center">
+          <span class="fw-semibold" style="font-size: 18px">Profile</span>
+        </div>
+      </div>
+      <div class="col-md d-flex align-items-center justify-content-center mt-4">
+        <img src="images/avatar.png" class="img-fluid" style="
+              border-radius: 50%;
+              box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+            " />
+      </div>
+      <p class="text-center mt-2">Mr. Thomas</p>
+    </div>
+  </div>
+
+  <!-- Profile Section End -->
+
+  <!-- Input Section Start -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <div class="d-flex align-items-center mt-3 py-2 rounded-3" style="background-color: #f5f6fb">
+          <img src="icon/user2.png" class="mx-3" />
+          <span class="mx-0">My Profile</span>
+        </div>
+        <div class="d-flex align-items-center mt-3 py-2 rounded-3" style="background-color: #f5f6fb">
+          <button class="btn px-0" data-bs-target="#editModal" data-bs-toggle="modal">
+            <img src="icon/icn4.png" class="mx-3" />
+          </button>
+          <span class="mx-0">Edit Profile</span>
+        </div>
+
+        <div class="d-flex align-items-center mt-3 py-2 rounded-3" style="background-color: #f5f6fb">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn px-0" data-bs-toggle="modal" data-bs-target="#logoutModal">
+            <img src="icon/logout.png" class="mx-3" />
+          </button>
+          <span class="mx-0">Logout</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Modal Start -->
+
+  <div class="modal fade" id="editModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel">
+            Edit Profile
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control shadow-none" id="floatingInput" placeholder="Full name" />
+            <label for="floatingInput">Full Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control shadow-none" id="floatingInput" placeholder="Email" />
+            <label for="floatingInput">Email Address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control shadow-none" id="floatingInput" placeholder="Phone no" />
+            <label for="floatingInput">Phone No</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="date" class="form-control shadow-none" id="floatingInput" placeholder="Date of birth" />
+            <label for="floatingInput">DOB</label>
+          </div>
+          <div class="form-floating">
+            <select class="form-select shadow-none" id="floatingSelect" aria-label="Floating label select example">
+              <option selected disabled>Select</option>
+              <option value="1">Male</option>
+              <option value="2">Female</option>
+              <option value="3">Transgender</option>
+            </select>
+            <label for="floatingSelect">Select Gender</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button style="background-color: #e30613" class="btn text-white" data-bs-target="#exampleModalToggle2"
+            data-bs-toggle="modal">
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Modal End -->
+
+  <!-- Logout Modal Start -->
+
+  <div class="modal fade" id="logoutModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel">
+            Log Out?
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure want to log out?
+        </div>
+        <div class="modal-footer">
+          <button style="background-color: #e30613" class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+            data-bs-toggle="modal">
+            Log out
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logout Modal End -->
+
+  <!-- Input Section End -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
